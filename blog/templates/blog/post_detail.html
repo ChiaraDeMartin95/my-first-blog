@@ -7,9 +7,13 @@
                 {{ post2.published_date }}
             </div>
         {% endif %}
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'post_edit' pk=post2.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
         <h1>{{ post2.title }}</h1>
         <p>{{ post2.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
+
 
 ""penso che post2 debba combaciare con 'post2' definito in views.py in 'blog/post_detail.html', {'post2': post1})
