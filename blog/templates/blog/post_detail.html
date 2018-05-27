@@ -2,12 +2,14 @@
 
 {% block content %}
     <div class="post">
-        {% if post.published_date %}
+        {% if post2.published_date %}
             <div class="date">
-                {{ post.published_date }}
+                {{ post2.published_date }}
             </div>
         {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <h1>{{ post2.title }}</h1>
+        <p>{{ post2.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
+
+""penso che post2 debba combaciare con 'post2' definito in views.py in 'blog/post_detail.html', {'post2': post1})
